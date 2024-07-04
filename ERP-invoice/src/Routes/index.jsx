@@ -5,7 +5,11 @@ import {
   Navigate,
 } from "react-router-dom";
 import { routes } from "./routes";
-const Layout = lazy(() => import("ERP_container/Layout"));
+const Layout = lazy(() =>
+  import("ERP_container/Layout").catch(() => {
+    return { default: () => <>Component unavailable!</> };
+  })
+);
 
 const Routes = () => {
   return (
