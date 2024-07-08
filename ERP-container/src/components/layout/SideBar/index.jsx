@@ -68,47 +68,9 @@ const SideBar = ({ routes }) => {
       data-bs-scroll="true"
       data-bs-backdrop="false"
     >
-      <div className="d-flex justify-content-between">
-        <div>
-          <Link
-            to={"/"}
-            className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-          >
-            <span className="fs-4">
-              <img src={'/public/images/logo.svg'} alt="SocialPie Logo" />
-            </span>
-          </Link>
-        </div>
-      </div>
-      <hr />
       <Nav className="nav-pills flex-column mb-auto">
         {renderSidebarItems(sidebarItems)}
       </Nav>
-      <hr />
-      <Dropdown>
-        <Dropdown.Toggle
-          className="d-flex align-items-center link-body-emphasis text-decoration-none"
-          variant="transparent"
-          id="dropdown-basic"
-        >
-          <img
-            src="https://github.com/Tabish-binaryvibes.png"
-            alt=""
-            width="32"
-            height="32"
-            className="rounded-circle me-2"
-          />
-          <strong>Tabish</strong>
-        </Dropdown.Toggle>
-
-        <Dropdown.Menu className="text-small shadow">
-          <Dropdown.Item href="#">New project...</Dropdown.Item>
-          <Dropdown.Item href="#">Settings</Dropdown.Item>
-          <Dropdown.Item href="#">Profile</Dropdown.Item>
-          <Dropdown.Divider />
-          <Dropdown.Item href="#">Sign out</Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown>
     </div>
   );
 };
