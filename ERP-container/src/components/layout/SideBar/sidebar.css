@@ -1,0 +1,32 @@
+.sticky__sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.sticky__sidebar {
+    transition: transform 0.3s ease;
+}
+.sidebar-open {
+    transform: translateX(0);
+}
+.sidebar-closed {
+    transform: translateX(-100%);
+}
+@media (min-width: 768px) {
+    .sidebar-open, .sidebar-closed {
+        transform: translateX(0);
+    }
+}
+/* Firefox */
+#numberValueField input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+#numberValueField input[type=number] {
+  -moz-appearance: textfield;
+}

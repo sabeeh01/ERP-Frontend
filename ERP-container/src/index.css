@@ -8,3 +8,133 @@ body {
   max-width: 800px;
   margin-top: 20px;
 }
+
+@import url("./components//layout//SideBar/sidebar.css");
+
+@font-face {
+  font-family: "openSansBold";
+  src: url("/public/fonts/OpenSans/OpenSans-Bold.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "openSansBoldItalic";
+  src: url("/public/fonts/OpenSans/OpenSans-BoldItalic.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "openSansExtraBold";
+  src: url("/public/fonts/OpenSans/OpenSans-ExtraBold.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "openSansExtraBoldItalic";
+  src: url("/public/fonts/OpenSans/OpenSans-ExtraBoldItalic.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "openSansItalic";
+  src: url("/public/fonts/OpenSans/OpenSans-Italic.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "openSansLight";
+  src: url("/public/fonts/OpenSans/OpenSans-Light.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "openSansLightItalic";
+  src: url("/public/fonts/OpenSans/OpenSans-LightItalic.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "openSansRegular";
+  src: url("/public/fonts/OpenSans/OpenSans-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "openSansSemiBold";
+  src: url("/public/fonts/OpenSans/OpenSans-SemiBold.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "openSansSemiBoldItalic";
+  src: url("/public/fonts/OpenSans/OpenSans-SemiBoldItalic.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "caustenRegular";
+  src: url("/public/fonts/OpenSans/OpenSans-Regular.ttf");
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link,
+.bg-login-color {
+  background-color: #4d59e6 !important;
+}
+
+.bg-app-color {
+  background-color: #eff3f6;
+  padding: 1.5rem 3rem;
+}
+.hover {
+  cursor: pointer;
+}
+input,
+select,
+textarea {
+  border: 1px solid #cfd2d7;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: unset !important;
+}
+
+.list-group-item + .list-group-item {
+  border-top-width: 1px !important;
+  border-radius: 5px !important;
+}
+
+.web-mode {
+  display: block;
+}
+
+.mob-mode {
+  display: none;
+}
+
+th {
+  vertical-align: baseline;
+}
+@media screen and (max-width: 768px) {
+  .web-mode {
+    display: none;
+  }
+  .mob-mode {
+    display: block;
+  }
+  .bg-app-color {
+    padding: 1rem !important;
+  }
+  td {
+    min-width: 150px;
+  }
+  .r-align-item-start {
+    align-items: flex-start !important;
+    padding-top: 1rem;
+  }
+}

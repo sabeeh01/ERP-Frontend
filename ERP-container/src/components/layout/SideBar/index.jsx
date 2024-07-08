@@ -1,19 +1,17 @@
-
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom"; // Assuming you are using react-router-dom for routing
 import { Link } from "react-router-dom";
 import { Nav, Dropdown } from "react-bootstrap";
 
-const SideBar = ({ state, routes }) => {
+const SideBar = ({ routes }) => {
   const location = useLocation();
   const asPath = location.pathname;
   const [sidebarItems, setSidebarItems] = useState(routes);
-  const [expandedItems, setExpandedItems] = useState({}); 
-
+  const [expandedItems, setExpandedItems] = useState({});
   useEffect(() => {
     const updatedSidebarItems = routes.map((item) => ({
       ...item,
-      active: asPath.startsWith(item.path),
+      active: asPath === item.path,
     }));
     setSidebarItems(updatedSidebarItems);
   }, [asPath]);
@@ -32,11 +30,7 @@ const SideBar = ({ state, routes }) => {
         expandedItems[parentIndex !== null ? `${parentIndex}-${index}` : index];
 
       return (
-        <li
-          className="nav-item mt-2"
-          key={index}
-          onClick={() => state && state(false)}
-        >
+        <li className="nav-item mt-2" key={index}>
           <div
             onClick={() =>
               hasChildren &&
@@ -81,7 +75,7 @@ const SideBar = ({ state, routes }) => {
             className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
           >
             <span className="fs-4">
-              {/* <img src={logo} alt="SocialPie Logo" /> */}
+              <img src={'/public/images/logo.svg'} alt="SocialPie Logo" />
             </span>
           </Link>
         </div>

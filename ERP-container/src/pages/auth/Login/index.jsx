@@ -22,7 +22,7 @@ export default function Login() {
     try {
       const payload = { username, password };
       localStorage.setItem("token", "jwt_token");
-      navigate("/invoice");
+      navigate("/invoice/");
     } catch (error) {
       console.error("Login error:", error);
     } finally {
